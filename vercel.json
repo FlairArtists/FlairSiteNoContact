@@ -1,4 +1,10 @@
 {
+  "redirects": [
+    { "source": "/Associate Artists.dc.html", "destination": "/", "permanent": false },
+    { "source": "/Associate%20Artists.dc.html", "destination": "/", "permanent": false },
+    { "source": "/Associate Artists.dc", "destination": "/", "permanent": false },
+    { "source": "/Associate%20Artists.dc", "destination": "/", "permanent": false }
+  ],
   "rewrites": [
     { "source": "/", "destination": "/Home.dc.html" }
   ],
