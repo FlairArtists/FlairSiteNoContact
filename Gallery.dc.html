@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <style>
+    @keyframes flairMarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  </style>
+</helmet>
+<div style="position: relative; width: 100%; display: flex; justify-content: center; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);">
+  <div style="display: flex; gap: 16px; width: max-content; animation: flairMarquee {{ duration }} linear infinite;">
+    <sc-for list="{{ slides }}" as="slide" hint-placeholder-count="6">
+      <div style="flex-shrink: 0; width: 200px; height: 150px; overflow: hidden; background: #0A0906; border: 1px solid rgba(241,232,213,0.14);">
+        <img src="{{ slide.src }}" alt="{{ slide.alt }}" style="display: block; width: 100%; height: 100%; object-fit: contain; object-position: center;">
+      </div>
+    </sc-for>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:800,&quot;height&quot;:170},&quot;images&quot;:{&quot;editor&quot;:null,&quot;default&quot;:[],&quot;tsType&quot;:&quot;string[]&quot;},&quot;title&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Gallery&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const images = this.props.images || [];
+    const title = this.props.title || 'Gallery';
+    if (!images.length) return { slides: [], duration: '12s' };
+    // Repeat the set enough times so one half of the track always spans wider
+    // than any viewport — otherwise the loop runs out of tiles and the track
+    // shows empty space before it wraps.
+    const tileWidth = 216;
+    const minHalfPx = 3600;
+    const repeat = Math.max(2, Math.ceil(minHalfPx / (tileWidth * images.length)));
+    const half = [];
+    for (let r = 0; r < repeat; r++) half.push(...images);
+    const doubled = half.concat(half);
+    const slides = doubled.map((src, i) => ({ src, alt: title + ' ' + ((i % images.length) + 1) }));
+    const speedPxPerSec = 40;
+    const duration = Math.max((half.length * tileWidth) / speedPxPerSec, 10) + 's';
+    return { slides, duration };
+  }
+}
+
+</script>
+</body>
+</html>

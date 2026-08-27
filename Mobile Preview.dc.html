@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; background: #0B0906; }
+  body { font-family: 'Archivo', sans-serif; }
+  a { color: #D4A650; }
+  a:hover { color: #EFCE8C; }
+</style>
+</helmet>
+
+<div style="min-height: 100vh; background: #0B0906; color: #F1E8D5; padding: 24px clamp(16px, 3vw, 40px) 48px; display: flex; flex-direction: column; gap: 20px;">
+
+  <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px;">
+    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #D4A650;">DEVICE PREVIEW</span>
+    <select onChange="{{ onPage }}" value="{{ page }}" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.04em; color: #F1E8D5; background: #16110A; border: 1px solid rgba(241,232,213,0.2); border-radius: 8px; padding: 9px 12px;">
+      <sc-for list="{{ pages }}" as="p" hint-placeholder-count="8">
+        <option value="{{ p }}">{{ p }}</option>
+      </sc-for>
+    </select>
+    <div style="display: flex; gap: 6px;">
+      <sc-for list="{{ devices }}" as="d" hint-placeholder-count="4">
+        <button onClick="{{ d.onClick }}" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; cursor: pointer; border-radius: 999px; padding: 9px 14px; border: 1px solid {{ d.border }}; background: {{ d.bg }}; color: {{ d.color }};">{{ d.label }}</button>
+      </sc-for>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: center; gap: 28px;">
+
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: rgba(241,232,213,0.85);">{{ phoneLabel }}</span>
+      <div style="position: relative; padding: 12px; border-radius: 44px; background: #1A1206; box-shadow: 0 0 0 1px rgba(241,232,213,0.18), 0 24px 60px rgba(0,0,0,0.6);">
+        <div style="position: relative; overflow: hidden; border-radius: 32px; background: #060503; width: {{ phoneW }}px; height: 780px;">
+          <iframe src="{{ src }}" title="mobile preview" style="width: {{ phoneW }}px; height: 780px; border: 0; display: block;"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div style="flex: 1 1 520px; min-width: 300px; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: rgba(241,232,213,0.85);">Desktop · fills available width</span>
+      <div style="width: 100%; padding: 10px; border-radius: 14px; background: #1A1206; box-shadow: 0 0 0 1px rgba(241,232,213,0.18), 0 24px 60px rgba(0,0,0,0.6);">
+        <div style="display: flex; gap: 6px; padding: 2px 4px 10px;">
+          <span style="width: 9px; height: 9px; border-radius: 50%; background: rgba(241,232,213,0.28);"></span>
+          <span style="width: 9px; height: 9px; border-radius: 50%; background: rgba(241,232,213,0.28);"></span>
+          <span style="width: 9px; height: 9px; border-radius: 50%; background: rgba(241,232,213,0.28);"></span>
+        </div>
+        <iframe src="{{ src }}" title="desktop preview" style="width: 100%; height: 780px; border: 0; display: block; border-radius: 6px; background: #060503;"></iframe>
+      </div>
+    </div>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { page: "Home.dc.html", w: 390, label: "iPhone 14 · 390px" };
+
+  renderVals() {
+    const devs = [
+      { label: "320", w: 320, name: "iPhone SE · 320px" },
+      { label: "375", w: 375, name: "iPhone SE 3 · 375px" },
+      { label: "390", w: 390, name: "iPhone 14 · 390px" },
+      { label: "430", w: 430, name: "iPhone Pro Max · 430px" }
+    ];
+    return {
+      pages: ["Home.dc.html","Main Artists.dc.html","Associate Artists.dc.html","Artist - Yashraj Kapil.dc.html","Artist - Kashish Mecwan.dc.html","IP - Sufiyat with Yashraj.dc.html","IP - Tanush.dc.html","IP - Yashraj LIVE.dc.html","IP - Kashish LIVE.dc.html","IP - Gujarati Garba.dc.html","IP - Vibes Unplugged.dc.html","Sufiyat - Corporate Events.dc.html","Sufiyat - Social Events.dc.html","Tanush - Corporate Events.dc.html","Tanush - Social Events.dc.html","Gallery.dc.html"],
+      page: this.state.page,
+      src: encodeURI(this.state.page),
+      phoneW: this.state.w,
+      phoneLabel: this.state.label,
+      onPage: (e) => this.setState({ page: e.target.value }),
+      devices: devs.map(d => ({
+        label: d.label,
+        border: this.state.w === d.w ? "#D4A650" : "rgba(241,232,213,0.2)",
+        bg: this.state.w === d.w ? "rgba(212,166,80,0.14)" : "transparent",
+        color: this.state.w === d.w ? "#EFCE8C" : "rgba(241,232,213,0.6)",
+        onClick: () => this.setState({ w: d.w, label: d.name })
+      }))
+    };
+  }
+}
+</script>
+</body>
+</html>
