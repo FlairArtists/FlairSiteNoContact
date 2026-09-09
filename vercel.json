@@ -3,10 +3,12 @@
     { "source": "/Associate Artists.dc.html", "destination": "/", "permanent": false },
     { "source": "/Associate%20Artists.dc.html", "destination": "/", "permanent": false },
     { "source": "/Associate Artists.dc", "destination": "/", "permanent": false },
-    { "source": "/Associate%20Artists.dc", "destination": "/", "permanent": false }
+    { "source": "/Associate%20Artists.dc", "destination": "/", "permanent": false },
+    { "source": "/Home.dc.html", "destination": "/", "permanent": false },
+    { "source": "/Home.dc", "destination": "/", "permanent": false }
   ],
   "rewrites": [
-    { "source": "/", "destination": "/Home.dc.html" }
+    { "source": "/", "destination": "/Main Artists.dc.html" }
   ],
   "headers": [
     {
