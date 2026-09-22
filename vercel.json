@@ -1,20 +1,362 @@
 {
   "redirects": [
-    { "source": "/Associate Artists.dc.html", "destination": "/", "permanent": false },
-    { "source": "/Associate%20Artists.dc.html", "destination": "/", "permanent": false },
-    { "source": "/Associate Artists.dc", "destination": "/", "permanent": false },
-    { "source": "/Associate%20Artists.dc", "destination": "/", "permanent": false },
-    { "source": "/Home.dc.html", "destination": "/", "permanent": false },
-    { "source": "/Home.dc", "destination": "/", "permanent": false }
+    {
+      "source": "/Home.dc.html",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/Home.dc",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/Associate%20Artists.dc.html",
+      "destination": "/associateartists",
+      "permanent": false
+    },
+    {
+      "source": "/Associate Artists.dc.html",
+      "destination": "/associateartists",
+      "permanent": false
+    },
+    {
+      "source": "/Associate Artists.dc",
+      "destination": "/associateartists",
+      "permanent": false
+    },
+    {
+      "source": "/Associate%20Artists.dc",
+      "destination": "/associateartists",
+      "permanent": false
+    },
+    {
+      "source": "/Main%20Artists.dc.html",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/Main Artists.dc.html",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/Main Artists.dc",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/Main%20Artists.dc",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/Artist%20-%20Yashraj%20Kapil.dc.html",
+      "destination": "/yashrajkapil",
+      "permanent": false
+    },
+    {
+      "source": "/Artist - Yashraj Kapil.dc.html",
+      "destination": "/yashrajkapil",
+      "permanent": false
+    },
+    {
+      "source": "/Artist%20-%20Yashraj%20Kapil.dc",
+      "destination": "/yashrajkapil",
+      "permanent": false
+    },
+    {
+      "source": "/Artist - Yashraj Kapil.dc",
+      "destination": "/yashrajkapil",
+      "permanent": false
+    },
+    {
+      "source": "/Artist - Kashish Mecwan.dc.html",
+      "destination": "/kashishmecwan",
+      "permanent": false
+    },
+    {
+      "source": "/Artist%20-%20Kashish%20Mecwan.dc.html",
+      "destination": "/kashishmecwan",
+      "permanent": false
+    },
+    {
+      "source": "/Artist%20-%20Kashish%20Mecwan.dc",
+      "destination": "/kashishmecwan",
+      "permanent": false
+    },
+    {
+      "source": "/Artist - Kashish Mecwan.dc",
+      "destination": "/kashishmecwan",
+      "permanent": false
+    },
+    {
+      "source": "/IP%20-%20Sufiyat%20with%20Yashraj.dc.html",
+      "destination": "/sufiyat",
+      "permanent": false
+    },
+    {
+      "source": "/IP - Sufiyat with Yashraj.dc.html",
+      "destination": "/sufiyat",
+      "permanent": false
+    },
+    {
+      "source": "/IP%20-%20Sufiyat%20with%20Yashraj.dc",
+      "destination": "/sufiyat",
+      "permanent": false
+    },
+    {
+      "source": "/IP - Sufiyat with Yashraj.dc",
+      "destination": "/sufiyat",
+      "permanent": false
+    },
+    {
+      "source": "/IP%20-%20Tanush.dc.html",
+      "destination": "/tanush",
+      "permanent": false
+    },
+    {
+      "source": "/IP - Tanush.dc.html",
+      "destination": "/tanush",
+      "permanent": false
+    },
+    {
+      "source": "/IP%20-%20Tanush.dc",
+      "destination": "/tanush",
+      "permanent": false
+    },
+    {
+      "source": "/IP - Tanush.dc",
+      "destination": "/tanush",
+      "permanent": false
+    },
+    {
+      "source": "/IP - Yashraj LIVE.dc.html",
+      "destination": "/yashraajlive",
+      "permanent": false
+    },
+    {
+      "source": "/IP%20-%20Yashraj%20LIVE.dc.html",
+      "destination": "/yashraajlive",
+      "permanent": false
+    },
+    {
+      "source": "/IP%20-%20Yashraj%20LIVE.dc",
+      "destination": "/yashraajlive",
+      "permanent": false
+    },
+    {
+      "source": "/IP - Yashraj LIVE.dc",
+      "destination": "/yashraajlive",
+      "permanent": false
+    },
+    {
+      "source": "/IP%20-%20Kashish%20LIVE.dc.html",
+      "destination": "/kashishlive",
+      "permanent": false
+    },
+    {
+      "source": "/IP - Kashish LIVE.dc.html",
+      "destination": "/kashishlive",
+      "permanent": false
+    },
+    {
+      "source": "/IP - Kashish LIVE.dc",
+      "destination": "/kashishlive",
+      "permanent": false
+    },
+    {
+      "source": "/IP%20-%20Kashish%20LIVE.dc",
+      "destination": "/kashishlive",
+      "permanent": false
+    },
+    {
+      "source": "/IP%20-%20Gujarati%20Garba.dc.html",
+      "destination": "/gujaratigarba",
+      "permanent": false
+    },
+    {
+      "source": "/IP - Gujarati Garba.dc.html",
+      "destination": "/gujaratigarba",
+      "permanent": false
+    },
+    {
+      "source": "/IP - Gujarati Garba.dc",
+      "destination": "/gujaratigarba",
+      "permanent": false
+    },
+    {
+      "source": "/IP%20-%20Gujarati%20Garba.dc",
+      "destination": "/gujaratigarba",
+      "permanent": false
+    },
+    {
+      "source": "/IP - Vibes Unplugged.dc.html",
+      "destination": "/vibesunplugged",
+      "permanent": false
+    },
+    {
+      "source": "/IP%20-%20Vibes%20Unplugged.dc.html",
+      "destination": "/vibesunplugged",
+      "permanent": false
+    },
+    {
+      "source": "/IP - Vibes Unplugged.dc",
+      "destination": "/vibesunplugged",
+      "permanent": false
+    },
+    {
+      "source": "/IP%20-%20Vibes%20Unplugged.dc",
+      "destination": "/vibesunplugged",
+      "permanent": false
+    },
+    {
+      "source": "/Sufiyat%20-%20Corporate%20Events.dc.html",
+      "destination": "/sufiyat/corporate",
+      "permanent": false
+    },
+    {
+      "source": "/Sufiyat - Corporate Events.dc.html",
+      "destination": "/sufiyat/corporate",
+      "permanent": false
+    },
+    {
+      "source": "/Sufiyat - Corporate Events.dc",
+      "destination": "/sufiyat/corporate",
+      "permanent": false
+    },
+    {
+      "source": "/Sufiyat%20-%20Corporate%20Events.dc",
+      "destination": "/sufiyat/corporate",
+      "permanent": false
+    },
+    {
+      "source": "/Sufiyat - Social Events.dc.html",
+      "destination": "/sufiyat/social",
+      "permanent": false
+    },
+    {
+      "source": "/Sufiyat%20-%20Social%20Events.dc.html",
+      "destination": "/sufiyat/social",
+      "permanent": false
+    },
+    {
+      "source": "/Sufiyat%20-%20Social%20Events.dc",
+      "destination": "/sufiyat/social",
+      "permanent": false
+    },
+    {
+      "source": "/Sufiyat - Social Events.dc",
+      "destination": "/sufiyat/social",
+      "permanent": false
+    },
+    {
+      "source": "/Tanush - Corporate Events.dc.html",
+      "destination": "/tanush/corporate",
+      "permanent": false
+    },
+    {
+      "source": "/Tanush%20-%20Corporate%20Events.dc.html",
+      "destination": "/tanush/corporate",
+      "permanent": false
+    },
+    {
+      "source": "/Tanush - Corporate Events.dc",
+      "destination": "/tanush/corporate",
+      "permanent": false
+    },
+    {
+      "source": "/Tanush%20-%20Corporate%20Events.dc",
+      "destination": "/tanush/corporate",
+      "permanent": false
+    },
+    {
+      "source": "/Tanush - Social Events.dc.html",
+      "destination": "/tanush/social",
+      "permanent": false
+    },
+    {
+      "source": "/Tanush%20-%20Social%20Events.dc.html",
+      "destination": "/tanush/social",
+      "permanent": false
+    },
+    {
+      "source": "/Tanush%20-%20Social%20Events.dc",
+      "destination": "/tanush/social",
+      "permanent": false
+    },
+    {
+      "source": "/Tanush - Social Events.dc",
+      "destination": "/tanush/social",
+      "permanent": false
+    }
   ],
   "rewrites": [
-    { "source": "/", "destination": "/Main Artists.dc.html" }
+    {
+      "source": "/",
+      "destination": "/Main Artists.dc.html"
+    },
+    {
+      "source": "/associateartists",
+      "destination": "/Associate Artists.dc.html"
+    },
+    {
+      "source": "/yashrajkapil",
+      "destination": "/Artist - Yashraj Kapil.dc.html"
+    },
+    {
+      "source": "/kashishmecwan",
+      "destination": "/Artist - Kashish Mecwan.dc.html"
+    },
+    {
+      "source": "/sufiyat",
+      "destination": "/IP - Sufiyat with Yashraj.dc.html"
+    },
+    {
+      "source": "/tanush",
+      "destination": "/IP - Tanush.dc.html"
+    },
+    {
+      "source": "/yashraajlive",
+      "destination": "/IP - Yashraj LIVE.dc.html"
+    },
+    {
+      "source": "/kashishlive",
+      "destination": "/IP - Kashish LIVE.dc.html"
+    },
+    {
+      "source": "/gujaratigarba",
+      "destination": "/IP - Gujarati Garba.dc.html"
+    },
+    {
+      "source": "/vibesunplugged",
+      "destination": "/IP - Vibes Unplugged.dc.html"
+    },
+    {
+      "source": "/sufiyat/corporate",
+      "destination": "/Sufiyat - Corporate Events.dc.html"
+    },
+    {
+      "source": "/sufiyat/social",
+      "destination": "/Sufiyat - Social Events.dc.html"
+    },
+    {
+      "source": "/tanush/corporate",
+      "destination": "/Tanush - Corporate Events.dc.html"
+    },
+    {
+      "source": "/tanush/social",
+      "destination": "/Tanush - Social Events.dc.html"
+    }
   ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
       ]
     }
   ]
