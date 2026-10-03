@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <meta name="googlebot" content="noindex, nofollow">
-<script src="./support.js"></script>
+<script src="/support.js"></script>
 </head>
 <body>
 <x-dc>
@@ -89,7 +89,7 @@ class Component extends DCLogic {
 
   componentDidMount() {
     const list = this.props.playlistId ?? "PLBNw4JPDP7Q0";
-    import("./playlist.js")
+    import("/playlist.js")
       .then((m) => m.fetchPlaylist(list, 24))
       .then((items) => { if (items && items.length) this.setState({ live: items }); })
       .catch(() => {});
